@@ -20,7 +20,7 @@ built with love in rust. fits perfectly into tiling window managers (like hyprla
 you will need the rust programming language installed (you can get it from the official rustup website).
 
 1. clone the source code and navigate to the project folder:  
-   git clone link  
+   git clone github.com/gloomyweather/todoterm  
    cd todo-tui
 
 2. build and run the release (optimized) version:  
