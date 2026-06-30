@@ -1,7 +1,7 @@
 # todoterm
 a minimalist and aesthetic terminal task manager written in Rust, featuring vim-like keybindings and a zero-noise monochrome design.
 
-# **૮ ˶ᵔ ᵕ ᵔ˶ ა todo-tui**
+# **૮ ˶ᵔ ᵕ ᵔ˶ ა todoterm**
 
 a minimalist and aesthetic task manager for the terminal.
 
@@ -21,7 +21,7 @@ you will need the rust programming language installed (you can get it from the o
 
 1. clone the source code and navigate to the project folder:  
    git clone github.com/gloomyweather/todoterm  
-   cd todo-tui
+   cd todoterm
 
 2. build and run the release (optimized) version:  
    cargo run \--release
