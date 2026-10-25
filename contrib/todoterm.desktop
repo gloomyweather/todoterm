@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Todo
+GenericName=Task list
+Comment=Minimalist terminal task manager
+Exec=sh -c "if command -v omarchy-launch-or-focus-tui >/dev/null; then exec omarchy-launch-or-focus-tui todoterm; else exec xdg-terminal-exec --app-id=org.omarchy.todoterm -e todoterm; fi"
+Icon=todoterm
+Terminal=false
+Categories=Utility;
+Keywords=todo;tasks;terminal;
+StartupWMClass=org.omarchy.todoterm

@@ -1,0 +1,40 @@
+# Maintainer: gloomyweather <https://github.com/gloomyweather>
+pkgname=todoterm
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Minimalist and aesthetic terminal task manager"
+arch=('x86_64' 'aarch64')
+url="https://github.com/gloomyweather/todoterm"
+license=('GPL-3.0-only')
+depends=('gcc-libs' 'glibc')
+makedepends=('cargo' 'git')
+optdepends=('xdg-terminal-exec: open from the app launcher outside Omarchy')
+source=("$pkgname::git+$url.git#tag=v$pkgver")
+sha256sums=('SKIP')
+
+prepare() {
+  cd "$pkgname"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
+}
+
+build() {
+  cd "$pkgname"
+  export RUSTUP_TOOLCHAIN=stable
+  export CARGO_TARGET_DIR=target
+  cargo build --frozen --release
+}
+
+check() {
+  cd "$pkgname"
+  export RUSTUP_TOOLCHAIN=stable
+  cargo test --frozen
+}
+
+package() {
+  cd "$pkgname"
+  install -Dm755 target/release/todoterm "$pkgdir/usr/bin/todoterm"
+  install -Dm644 assets/todoterm.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/todoterm.svg"
+  install -Dm644 contrib/todoterm.desktop "$pkgdir/usr/share/applications/todoterm.desktop"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+}
