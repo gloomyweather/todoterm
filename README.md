@@ -4,21 +4,7 @@ a minimalist and aesthetic task manager for the terminal.
 
 built with love in rust. one window, one list. fits perfectly into tiling window managers (and feels at home in [omarchy](https://omarchy.org)), with vim-like keys and zero visual noise.
 
-```
-  ~ todo list ~  (=^･ω･^=)                                                     2/8
- ──────────────────────────────────────────────────────────────────────────────────
-    [ ] !!! finish the jot readme                                             today
-    [ ] !! reply to the landlord about the heater                          tomorrow
-    [ ] ! renew library books                                                   wed
-  › [ ] book a dentist appointment                                              fri
-    [ ] try the new omarchy theme
-    [ ] read chapter 16 of the rust book                                     nov 03
-    [x] !! back up dotfiles
-    [x] buy coffee beans
-
- ──────────────────────────────────────────────────────────────────────────────────
-  a add  spc done  e edit  d delete  u undo  / filter  J/K move  p priority  ? help
-```
+![todoterm in a floating window on omarchy](.github/screenshot.png)
 
 ## features
 
