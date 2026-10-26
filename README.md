@@ -35,7 +35,7 @@ the theme is picked up automatically, and the launcher icon recolors itself on e
 
 ### with cargo
 
-you will need rust (get it from rustup.rs).
+you will need rust (get it from [rustup.rs](https://rustup.rs)).
 
 ```sh
 cargo install --git https://github.com/gloomyweather/todoterm
